@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Nova Market</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nova<span>Market</span></a>
+            <nav class="nav-menu" id="navMenu"><a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link active">Products</a><a href="contact.html" class="nav-link">Contact</a></nav>
+            <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <main class="container">
+        <h2 style="margin-bottom:20px;">Async Warehouse API</h2>
+        <div id="loadingIndicator">Querying remote resource data...</div>
+        <section class="products-grid" id="productsContainer"></section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Nova Market.</p>
+            <div class="footer-links"><a href="index.html">Home</a><a href="products.html">Products</a><a href="contact.html">Contact</a></div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
