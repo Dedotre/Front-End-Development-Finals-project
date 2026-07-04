@@ -10,12 +10,12 @@
     <header class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">Nova<span>Market</span></a>
-            <nav class="nav-menu" id="navMenu"><a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link active">Products</a><a href="contact.html" class="nav-link">Contact</a></nav>
+            <nav class="nav-menu" id="navMenu"><a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link active">Products</a><a href="contact.html" class="nav-link">Contact/Cart <span id="navCartCount" class="cart-count hidden">0</span></a></nav>
             <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
         </div>
     </header>
     <main class="container">
-        <h2 style="margin-bottom:20px;">Async Warehouse API</h2>
+        <input type="search" id="productSearch" placeholder="Search products..." style="width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;margin-bottom:20px;">
         <div id="loadingIndicator">Querying remote resource data...</div>
         <section class="products-grid" id="productsContainer"></section>
     </main>
