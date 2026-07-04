@@ -40,7 +40,6 @@ if (document.getElementById('productsContainer')) {
             if (match) match.qty++; 
             else cart.push({ id, title: e.target.dataset.title, price: parseFloat(e.target.dataset.price), qty: 1 });
             saveCart(cart);
-            alert('Saved to local storage.');
         }
     });
 }
@@ -67,7 +66,6 @@ if (document.getElementById('detailContainer')) {
                 const match = cart.find(i => i.id === p.id);
                 if (match) match.qty++; else cart.push({ id: p.id, title: p.title, price: p.price, qty: 1 });
                 saveCart(cart);
-                alert('Saved to local storage.');
             });
         } catch {
             document.getElementById('loadingIndicator').textContent = "Failed loading product view.";
