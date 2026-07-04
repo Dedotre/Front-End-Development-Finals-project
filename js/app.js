@@ -40,6 +40,10 @@ if (document.getElementById('productsContainer')) {
             if (match) match.qty++; 
             else cart.push({ id, title: e.target.dataset.title, price: parseFloat(e.target.dataset.price), qty: 1 });
             saveCart(cart);
+            
+            const originalText = e.target.textContent;
+            e.target.textContent = 'Added!';
+            setTimeout(() => e.target.textContent = originalText, 1000);
         }
     });
 }
@@ -61,11 +65,15 @@ if (document.getElementById('detailContainer')) {
                     <button id="addDetailBtn" class="btn btn-primary">Add to Local Cache</button>
                 </div>
             `;
-            document.getElementById('addDetailBtn').addEventListener('click', () => {
+            document.getElementById('addDetailBtn').addEventListener('click', (e) => {
                 const cart = getCart();
                 const match = cart.find(i => i.id === p.id);
                 if (match) match.qty++; else cart.push({ id: p.id, title: p.title, price: p.price, qty: 1 });
                 saveCart(cart);
+                
+                const originalText = e.target.textContent;
+                e.target.textContent = 'Added!';
+                setTimeout(() => e.target.textContent = originalText, 1000);
             });
         } catch {
             document.getElementById('loadingIndicator').textContent = "Failed loading product view.";
