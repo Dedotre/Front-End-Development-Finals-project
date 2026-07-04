@@ -245,6 +245,16 @@ input:focus:invalid, textarea:focus:invalid {
 .footer-links a { color: #94a3b8; text-decoration: none; margin-left: 15px; }
 .hidden { display: none !important; }
 
+.cart-count {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    padding: 1px 7px;
+    margin-left: 4px;
+}
+
 @media (max-width: 768px) {
     .hamburger { display: flex; }
     .nav-menu {
