@@ -40,7 +40,6 @@ if (document.getElementById('productsContainer')) {
             if (match) match.qty++; 
             else cart.push({ id, title: e.target.dataset.title, price: parseFloat(e.target.dataset.price), qty: 1 });
             saveCart(cart);
-            alert('Saved to local storage.');
         }
     });
 }
